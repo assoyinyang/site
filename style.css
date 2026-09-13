@@ -1,0 +1,350 @@
+/* Centre Rennais de Tai Chi Chuan — feuille de style
+   Palette : encre / papier de riz / rouge de sceau
+   Typo : Fraunces (titres, empattements à forte inflexion, esprit calligraphique)
+          + Work Sans (texte courant) */
+
+:root{
+  --paper: #f1ece0;
+  --paper-2: #e9e2d2;
+  --ink: #1b1815;
+  --ink-soft: #4a453d;
+  --seal: #7a241c;
+  --seal-soft: #9a3c2f;
+  --line: #c9bfa4;
+  --line-soft: #dcd4bd;
+  --max: 920px;
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+
+body{
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Work Sans", "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3{
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0;
+}
+
+a{ color: var(--seal); text-decoration-thickness: 1px; }
+a:hover{ color: var(--ink); }
+
+img{ max-width: 100%; display: block; }
+
+.wrap{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* ---------- En-tête ---------- */
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(241,236,224,0.94);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line-soft);
+}
+.site-header .wrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  gap: 20px;
+}
+.brand{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: var(--ink);
+}
+.brand img{ height: 40px; width: auto; }
+.brand-text{ line-height: 1.15; }
+.brand-text .eyebrow{ display:block; font-size: 12.5px; color: var(--ink-soft); }
+.brand-text strong{ font-family: "Fraunces", serif; font-size: 19px; }
+
+nav.primary{
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+nav.primary a{
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+nav.primary a:hover{ color: var(--seal); border-bottom-color: var(--seal); }
+
+/* ---------- Hero ---------- */
+.hero{
+  padding: 72px 0 56px;
+  position: relative;
+  overflow: hidden;
+}
+.hero .wrap{
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 40px;
+  align-items: center;
+}
+.hero h1{
+  font-size: clamp(34px, 5vw, 52px);
+  line-height: 1.08;
+}
+.hero h1 span{ display: block; }
+.hero p.lede{
+  margin-top: 20px;
+  max-width: 46ch;
+  color: var(--ink-soft);
+  font-size: 17.5px;
+}
+.hero-art{
+  display: flex;
+  justify-content: center;
+}
+.hero-art img{ width: 100%; max-width: 300px; }
+
+.cta-row{
+  margin-top: 30px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 3px;
+  font-size: 15px;
+  text-decoration: none;
+  border: 1px solid var(--ink);
+}
+.btn-solid{ background: var(--ink); color: var(--paper); }
+.btn-solid:hover{ background: var(--seal); border-color: var(--seal); color: #fff; }
+.btn-line{ color: var(--ink); border-color: var(--line); }
+.btn-line:hover{ border-color: var(--ink); color: var(--seal); }
+
+/* ---------- Sections génériques ---------- */
+section{ padding: 54px 0; border-top: 1px solid var(--line-soft); }
+section#accueil{ border-top: none; }
+
+.section-head{
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+.section-head h2{
+  font-size: 26px;
+  white-space: nowrap;
+}
+.section-head .rule{
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.grid-2{
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.intro-figure{
+  text-align: center;
+}
+.intro-figure img{
+  max-width: 220px;
+  margin: 0 auto;
+}
+.intro-figure figcaption{
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+.prose p{ margin: 0 0 16px; color: var(--ink-soft); }
+.prose p:first-child{ color: var(--ink); font-size: 18.5px; font-family:"Fraunces", serif; font-weight: 500; }
+
+/* ---------- Association ---------- */
+.assoc-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+.assoc-list li{
+  padding-left: 22px;
+  position: relative;
+  color: var(--ink-soft);
+}
+.assoc-list li::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 8px;
+  height: 8px;
+  background: var(--seal);
+  border-radius: 50%;
+}
+.assoc-list strong{ color: var(--ink); }
+
+.badge-40{
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 6px 14px;
+  border: 1px solid var(--seal);
+  color: var(--seal);
+  font-size: 13.5px;
+  border-radius: 3px;
+}
+
+/* ---------- Enseignement ---------- */
+.teach-wrap{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: start;
+}
+.teach-wrap .seal{
+  width: 90px;
+  opacity: 0.92;
+}
+
+/* ---------- Planning ---------- */
+.table-scroll{ overflow-x: auto; }
+table.planning{
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 620px;
+  font-size: 14.5px;
+}
+table.planning th, table.planning td{
+  border: 1px solid var(--line);
+  padding: 8px 10px;
+  text-align: center;
+}
+table.planning thead th{
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  background: var(--paper-2);
+}
+table.planning td.slot{
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 13.5px;
+}
+table.planning td.slot.gym{
+  background: #a9a196;
+  color: var(--ink);
+}
+.planning-note{
+  margin-top: 14px;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+/* ---------- Tarifs ---------- */
+.tarifs-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.tarif-card{
+  border: 1px solid var(--line);
+  padding: 20px 18px;
+  background: var(--paper-2);
+}
+.tarif-card .amount{
+  font-family: "Fraunces", serif;
+  font-size: 30px;
+  color: var(--seal);
+  display: block;
+}
+.tarif-card .label{
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.tarifs-note{
+  margin-top: 20px;
+  color: var(--ink-soft);
+  font-size: 15px;
+}
+.tarifs-note p{ margin: 0 0 8px; }
+
+/* ---------- Où et quand ---------- */
+.lieux-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.lieu{
+  border-left: 2px solid var(--seal);
+  padding-left: 16px;
+}
+.lieu h3{ font-size: 17px; margin-bottom: 6px; }
+.lieu p{ margin: 0; color: var(--ink-soft); font-size: 15px; }
+
+/* ---------- Contact / pied ---------- */
+footer{
+  background: var(--ink);
+  color: var(--paper-2);
+  padding: 48px 0 30px;
+}
+footer .wrap{
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 30px;
+  align-items: start;
+}
+footer h2{ color: var(--paper); font-size: 22px; }
+footer a{ color: var(--paper-2); }
+footer a:hover{ color: #fff; }
+footer .coords p{ margin: 4px 0; color: #cfc7b4; }
+footer .yy{ width: 70px; opacity: 0.9; justify-self: end; }
+.foot-bottom{
+  margin-top: 34px;
+  padding-top: 18px;
+  border-top: 1px solid #3a352c;
+  font-size: 12.5px;
+  color: #9a927e;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 760px){
+  nav.primary{ display: none; }
+  .hero .wrap{ grid-template-columns: 1fr; }
+  .hero-art{ order: -1; }
+  .hero-art img{ max-width: 170px; }
+  .grid-2{ grid-template-columns: 1fr; }
+  .teach-wrap{ grid-template-columns: 1fr; }
+  .teach-wrap .seal{ width: 70px; }
+  .tarifs-grid{ grid-template-columns: 1fr; }
+  .lieux-grid{ grid-template-columns: 1fr; }
+  footer .wrap{ grid-template-columns: 1fr; }
+  footer .yy{ justify-self: start; }
+}

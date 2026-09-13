@@ -1,0 +1,24 @@
+Site du Centre Rennais de Tai Chi Chuan
+========================================
+
+Contenu du dossier :
+- index.html      → la page du site
+- style.css       → la mise en forme
+- assets/         → images (logo, colombe/yin-yang, sceau) et la plaquette PDF
+- robots.txt      → autorise les moteurs de recherche à indexer le site
+- sitemap.xml     → aide Google à trouver la page
+
+Mettre le site en ligne gratuitement (2 minutes) :
+1. Aller sur https://pages.cloudflare.com (ou https://app.netlify.com/drop)
+2. Glisser-déposer ce dossier entier (pas juste index.html)
+3. Le site est en ligne avec une adresse du type nom-du-site.pages.dev
+
+Avant de publier, à remplacer :
+- Dans index.html et sitemap.xml : l'adresse "https://www.centrerennaistaichi.fr/"
+  par votre vrai nom de domaine (ou l'adresse .pages.dev fournie par Cloudflare).
+- Le numéro de téléphone et l'adresse si besoin.
+
+Référencement (Google) :
+1. Créer un compte sur https://search.google.com/search-console
+2. Ajouter votre site, soumettre l'adresse "sitemap.xml"
+3. Patienter quelques jours à quelques semaines pour l'indexation.
