@@ -8,14 +8,7 @@ Contenu du dossier :
 - robots.txt      → autorise les moteurs de recherche à indexer le site
 - sitemap.xml     → aide Google à trouver la page
 
-Mettre le site en ligne gratuitement (2 minutes) :
-1. Aller sur https://pages.cloudflare.com (ou https://app.netlify.com/drop)
-2. Glisser-déposer ce dossier entier (pas juste index.html)
-3. Le site est en ligne avec une adresse du type nom-du-site.pages.dev
-
 Avant de publier, à remplacer :
-- Dans index.html et sitemap.xml : l'adresse "https://www.centrerennaistaichi.fr/"
-  par votre vrai nom de domaine (ou l'adresse .pages.dev fournie par Cloudflare).
 - Le numéro de téléphone et l'adresse si besoin.
 
 Référencement (Google) :
